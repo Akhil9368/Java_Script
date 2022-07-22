@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <p>Hello Once You clicked On button then You are able to see the changes....</p>
+    <h1 id="newOne"></h1>
+    <br>
+    <button id="btn ">Click me</button>
+</div>
+    <script>
+        const  butt = document.querySelector('#btn');
+        const   value = document.querySelector('#newOne');
+//  setTimeout --->clearTimeOut
+        const myFun=()=>{
+        value.innerHTML = "Loading.....";
+            setTimeout(() => {
+                 value.innerHTML = "Akhil Soni";
+            },1000)
+        }
+       
+        butt.addEventListener('click',myFun);
+    </script>
+    // ClearTimeOut ---> Pass the Reference of SetTimeOut() for stop the interval of setTimeOut();
+
+
+    // Similarly SetInterval ---> clearInterval(also pass the refernce of the setInterval just store thevalue in any variable of setInterval)
+</body>
+</html>
